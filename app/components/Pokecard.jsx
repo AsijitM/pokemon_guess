@@ -11,7 +11,7 @@ export default function PokemonCard({ pokemon, isCorrect }) {
         if (!pokemon) return;
         const result = await axios.get(pokemon?.url);
         setData(result.data);
-        console.log('pokedata', result.data);
+        console.log('pokedata', data.sprites.front_default );
       };
       fetchData();
     } catch (error) {
